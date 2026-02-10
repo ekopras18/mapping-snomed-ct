@@ -44,6 +44,21 @@
     ```bash
     python snomed.py
     ```
+9. Result will be stored in `clinical_codes` table.
+
+   | id | domain | snomed\_root | concept\_id | display | icd\_code | icd\_system | priority | active |
+   | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+   | 1 | diagnosis | 404684003 | 126813005 | Neoplasm of anterior aspect of epiglottis \(disorder\) | D37.0 | ICD10 | 1 | 1 |
+   | 2 | diagnosis | 404684003 | 126814004 | Neoplasm of junctional region of epiglottis \(disorder\) | D38.0 | ICD10 | 1 | 1 |
+   | 3 | diagnosis | 404684003 | 126815003 | Neoplasm of lateral wall of oropharynx \(disorder\) | D37.0 | ICD10 | 1 | 1 |
+   | 4 | diagnosis | 404684003 | 126816002 | Neoplasm of posterior wall of oropharynx \(disorder\) | D37.0 | ICD10 | 1 | 1 |
+   | 5 | diagnosis | 404684003 | 126817006 | Neoplasm of esophagus \(disorder\) | D37.7 | ICD10 | 1 | 1 |
+   | 6 | diagnosis | 404684003 | 126818001 | Neoplasm of cervical esophagus \(disorder\) | D37.7 | ICD10 | 1 | 1 |
+   | 7 | diagnosis | 404684003 | 126819009 | Neoplasm of thoracic esophagus \(disorder\) | D37.7 | ICD10 | 1 | 1 |
+   | 8 | diagnosis | 404684003 | 126820003 | Neoplasm of abdominal esophagus \(disorder\) | D37.7 | ICD10 | 1 | 1 |
+   | 9 | diagnosis | 404684003 | 126822006 | Neoplasm of middle third of esophagus \(disorder\) | D37.7 | ICD10 | 1 | 1 |
+   | 10 | diagnosis | 404684003 | 126823001 | Neoplasm of lower third of esophagus \(disorder\) | D37.7 | ICD10 | 1 | 1 |
+
 
 
 ## 2. SPLIT PER FHIR RESOURCE (SESUAI SATUSEHAT)
@@ -96,3 +111,17 @@ Compaitible with:
     ```bash
     python snomed_fhir.py
     ```
+3. Result will be stored in `clinical_fhir_codes` table.
+
+   | id | fhir\_resource | domain | snomed\_root | concept\_id | description\_id | term | code | terminology | priority | effectiveTime | active |
+   | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+   | 1 | Condition | diagnosis | 404684003 | 131072002 | 210756015 | Increased pregnanediol level | null | SNOMED | 0 | 2002-01-31 | 1 |
+   | 2 | Condition | diagnosis | 404684003 | 65536004 | 108892018 | FIGO VM stage III | null | SNOMED | 0 | 2002-01-31 | 1 |
+   | 3 | Condition | diagnosis | 404684003 | 293077004 | 433261014 | Hydrazide antituberculosis drug adverse reaction | null | SNOMED | 0 | 2002-01-31 | 1 |
+   | 4 | Condition | diagnosis | 404684003 | 293077004 | 433261014 | Hydrazide antituberculosis drug adverse reaction | Y41.1 | ICD10 | 1 | 2002-01-31 | 1 |
+   | 5 | Condition | diagnosis | 404684003 | 293077004 | 433261014 | Hydrazide antituberculosis drug adverse reaction | T88.7 | ICD10 | 1 | 2002-01-31 | 1 |
+   | 6 | Condition | diagnosis | 404684003 | 162005007 | 252512014 | No tooth problem | null | SNOMED | 0 | 2002-01-31 | 1 |
+   | 7 | Condition | diagnosis | 404684003 | 61866006 | 102834014 | Infection by Porocephalus crotali | null | SNOMED | 0 | 2002-01-31 | 1 |
+   | 8 | Condition | diagnosis | 404684003 | 61866006 | 102834014 | Infection by Porocephalus crotali | B88.8 | ICD10 | 1 | 2002-01-31 | 1 |
+   | 9 | Condition | diagnosis | 404684003 | 127402007 | 690015 | Erythrocyte life span finding | null | SNOMED | 0 | 2002-01-31 | 1 |
+   | 10 | Condition | diagnosis | 404684003 | 289407003 | 429292013 | Sagittal suture in oblique diameter | null | SNOMED | 0 | 2002-01-31 | 1 |
